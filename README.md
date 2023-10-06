@@ -1,0 +1,1 @@
+Project URL: http://django-env.eba-yuybwtsz.us-east-1.elasticbeanstalk.com/
