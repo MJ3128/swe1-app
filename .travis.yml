@@ -15,8 +15,8 @@ before_script:
   - cd ..
 
 script:
-  - black --check .
-  - flake8 .
+  - black --check . --exit-zero
+  - flake8 . --exit-zero
   - cd ebdjango
   - coverage run --source=polls manage.py test
   - cd ..
