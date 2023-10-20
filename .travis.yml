@@ -17,7 +17,9 @@ before_script:
 script:
   - black --check .
   - flake8 .
-  - coverage run --source=ebdjango/swe1_app/polls manage.py test
+  - cd ebdjango
+  - coverage run --source=polls manage.py test
+  - cd ..
 
 after_script:
   - coveralls
