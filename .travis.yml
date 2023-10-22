@@ -15,6 +15,7 @@ script:
   - cd ebdjango
   - coverage run --source=polls manage.py test
   - cd ..
+  - bundle update rake
 after_script:
   - coveralls
 deploy:
