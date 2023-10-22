@@ -29,6 +29,4 @@ deploy:
   bucket_name: elasticbeanstalk-us-east-1-985358619177
   on:
     repo: MJ3128/swe1-app
-    branches:
-      only:
-        - main
+    branch: main
