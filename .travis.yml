@@ -20,14 +20,12 @@ after_script:
   - coveralls
 deploy:
   provider: elasticbeanstalk
-  access_key_id:
-    secure: Y2FnMWP3Olo+/T8seMy9UJM/EdbzMYzV0vsy/wrCENarZRBa7DYw5PxvcQnkqa6LVt3GXCLZuf4ykPaUOyru90b79TX/EibcuN8SJWpvgcA5PdJei979wp4j1Z1O0RDSzPBh6M05lcjIGai607HxEKLfFGZ6HtFwssRrfQ7a2J90rzBDUdQKCoCaESceMiKAtdvaiMomnQkV7mewWE3L3bP+RlEApIKGL17RgKDgjvVF/4xtrw+GFSgns9Km1p0HRiFMfAawHuWzHHrdiIt1WyvE+874nYXH5QWFhf3LTEXS8I548sg1hiGB4m2gXy6u7MGSrZ0Ndk7nSBcmdxYxXKsGealmfPDlmBOy466/nNAWZL8XteFbmApxeVy///1EsltFXgY1niva/aI1YLOXXf8QL7+B2Nw+xe0WGYZraXteXONyvTVVIER+ohpOpCPPFMEQrs9vjDpTK4JilJ9gbCXj+03I3uIXm5tH24jM2DbAkVdpdo4pWvO6rLBQBmQAmka8VfFWCU/uJxCa31Mqr8zdUoeVw59THd/rLOE1gS+4r9oUIbOJpHxKH+QIonqmqBe2p9r+aLDzZB0JJTcoG/LFbToJWRUlg9TbIrHZ9TxaU+dO9bZuZp0Scq+7DaPmN1x1Dw5WtJtNcupCjVX+1CDreK19IXuugExM96x93hE=
-  secret_access_key:
-    secure: DNpQqddImB0eNk4mM7hTEHOhbLT8bM5uP8shw/0nL9UsI71pSQBgVNovButLDLVRHK43yXw0Q6YjvUrXF5Qs7KTlZwdf6qr9VXqKyr45Vtoeryw1uQF0z4VM2EBf85Lcvq2+gl8dO45eKzJdgc9cSh6f/Uft4mYVqIJ+KUhKafKdPv/c6R3NEO2QFTsPSK2/hRGJHkBn4juNQ136UlnPCQYUs+Aw5jFaoKCi+RbvhP8h4qFevw5cEsTw3z2YJ22Q1KKZfkxs5sGr7eidyaGHlT1IBRe3in6ORmuENv8ama8UAbpqhMl4HWmseVtAIzG+I8YE0lsr+iaszjAvrytX+Q/0GiPTP6KB4ZSndGGjYNoP+V3d+MWuvy07iC5iCCR/hKO3EieeCtcGmjB9N11Lq+nqLE+8teNZdkGbE5yFUxpt4w9XRk2G6/CCCkRpKg4vz9ROrULbvXbKXI9MNs8GX3qvvpIOrgen2ZzauPS4cjxKD5wURIcfTeA2YMt01ak+GoNadNug84+PFm2iaHWmqYSvk8PeO+hmlKD91o+3yIvwLh3XcjCgpZ22nMpTPEGAy2EQWg9A82EijFL3swvXVBM4b9P1zeDps9bT318s9JwOuAvFXlpyMKJ94ZyPfvaL2U7GJ40l22BURIDDbo9ivbACRTWJHh/pZaD5JTVYfhE=
+  access_key_id: $AWS_ACCESS_ID
+  secret_access_key: $AWS_SECRET_KEY
   region: "us-east-1"
   app: "ebdjango"
   env: "django-env"
-  bucket_name: elasticbeanstalk-us-east-1-985358619177
+  bucket_name: $AWS_BUCKET
   on:
     repo: MJ3128/swe1-app
     branch: main
