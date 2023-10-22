@@ -4,6 +4,7 @@ python:
   - 3.11
 install:
   - pip install -r requirements.txt
+  - gem install webrick
 before_script:
   - cd ebdjango
   - python manage.py migrate
@@ -15,7 +16,6 @@ script:
   - cd ebdjango
   - coverage run --source=polls manage.py test
   - cd ..
-  - bundle update rake
 after_script:
   - coveralls
 deploy:
