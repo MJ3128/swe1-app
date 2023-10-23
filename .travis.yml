@@ -18,6 +18,8 @@ script:
   - cd ..
 after_script:
   - curl -sL https://coveralls.io/coveralls-linux.tar.gz | tar -xz && ./coveralls
+before_deploy:
+  - cd symbi
 deploy:
   provider: elasticbeanstalk
   access_key_id: $AWS_ACCESS_ID
