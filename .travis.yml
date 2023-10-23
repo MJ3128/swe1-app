@@ -17,7 +17,9 @@ script:
   - coverage run --source=polls manage.py test
   - cd ..
 after_script:
-  - coveralls
+  - curl -sL https://coveralls.io/coveralls-linux.tar.gz | tar -xz && ./coveralls
+before_deploy:
+  - cd ebdjango
 deploy:
   provider: elasticbeanstalk
   access_key_id: $AWS_ACCESS_ID
